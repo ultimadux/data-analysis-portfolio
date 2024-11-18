@@ -1,0 +1,1 @@
+-- this is where the core database is located. all other folders use or reference this database. 
