@@ -21,7 +21,7 @@ DECLARE @_l5 INT;
 SET @_l5 = 45;
 
 DECLARE @_l6 INT;
-SET @_l6 = 50;
+SET @_l6 = 55;
 
 CREATE TABLE employees ( -- create table of employee data
 	employ_id INT PRIMARY KEY,
@@ -159,12 +159,26 @@ SET salary = salary + (.75 * 40 * 52)
 	AND DATEDIFF(MONTH, employ_date, '2024-11-17') < 12;
 
 UPDATE employees
-SET salary = salary + (.75 * 40 * 52)
+SET salary = salary + (1.50 * 40 * 52)
 	WHERE DATEDIFF(MONTH, employ_date, '2024-11-17') >= 12
 	AND DATEDIFF(MONTH, employ_date, '2024-11-17') < 18;
 
+UPDATE employees
+SET salary = salary + (2.25 * 40 * 52)
+	WHERE DATEDIFF(MONTH, employ_date, '2024-11-17') >= 18
+	AND DATEDIFF(MONTH, employ_date, '2024-11-17') < 24;
+
+UPDATE employees
+SET salary = salary + (3.75 * 40 * 52)
+	WHERE DATEDIFF(MONTH, employ_date, '2024-11-17') >= 24
+	AND DATEDIFF(MONTH, employ_date, '2024-11-17') < 36;
+
+UPDATE employees
+SET salary = salary + (5.5 * 40 * 52)
+	WHERE DATEDIFF(MONTH, employ_date, '2024-11-17') >= 36;
+
 SELECT * FROM employees e
-ORDER BY employ_id ASC;
+ORDER BY salary ASC;
 
 SELECT *
 FROM departments;
