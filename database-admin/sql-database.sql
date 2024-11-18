@@ -45,7 +45,7 @@ INSERT INTO employees(employ_id, employ_name, employ_date, dept, pay_type)
 		(97472661, 'Charles Kinley', '2023-12-29', 'warehouse', 'L1'),
 		(46431529, 'Hananiah Bunch', '2023-04-21', 'warehouse', 'L1'),
 		(50226009, 'Aharon Tiara', '2024-05-24', 'warehouse', 'L1'),
-		(64835363, 'Randúlfr Markéta', '2024-02-14', 'warehouse', 'L1'),
+		(64835363, 'RandÃºlfr MarkÃ©ta', '2024-02-14', 'warehouse', 'L1'),
 		(37214434, 'Trish Miodrag', '2024-08-18', 'warehouse', 'L1'),
 		(93098621, 'Antonia Ligia', '2024-07-20', 'warehouse', 'L1'),
 		(68452305, 'Bruno Mars', '2024-06-11', 'warehouse', 'L1'),
@@ -181,4 +181,5 @@ SELECT * FROM employees e
 ORDER BY salary ASC;
 
 SELECT *
-FROM departments;
+FROM departments
+ORDER BY dept_id ASC;
