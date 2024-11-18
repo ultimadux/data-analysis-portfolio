@@ -177,9 +177,6 @@ UPDATE employees
 SET salary = salary + (5.5 * 40 * 52)
 	WHERE DATEDIFF(MONTH, employ_date, '2024-11-17') >= 36;
 
-SELECT * FROM employees e
-ORDER BY salary ASC;
+-- the database has been initialized
 
-SELECT *
-FROM departments
-ORDER BY dept_id ASC;
+SELECT 'The database is fully initialized.'
