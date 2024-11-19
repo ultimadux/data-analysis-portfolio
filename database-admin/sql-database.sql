@@ -125,7 +125,7 @@ INSERT INTO departments(dept_id, dept)
 -- calculate the salary of each individual employee
 
 ALTER TABLE employees
-	ADD salary INT;
+	ADD salary DECIMAL(10,2);
 
 UPDATE employees
 SET salary = @_l1 * 40 * 52
@@ -176,7 +176,3 @@ SET salary = salary + (3.75 * 40 * 52)
 UPDATE employees
 SET salary = salary + (5.5 * 40 * 52)
 	WHERE DATEDIFF(MONTH, employ_date, '2024-11-17') >= 36;
-
--- the database has been initialized
-
-SELECT 'The database is fully initialized.'
