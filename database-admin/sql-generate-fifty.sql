@@ -12,7 +12,7 @@ CREATE TABLE generatedTable (
 );
 
 WHILE @i < 50
-	BEGIN
+	BEGIN -- generate 50 employees and ids for each
 		INSERT INTO generatedTable(employeeID, employeeName)
 		VALUES
 			(@i, CONCAT('employee_', @i)) -- concatenate employee names
