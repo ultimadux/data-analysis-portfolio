@@ -31,3 +31,9 @@ INSERT INTO items_2 VALUES
 SELECT * FROM items_1
 UNION -- combines all of the data from the above table into the table below IF both tables have the same number of columns
 SELECT * FROM items_2;
+
+-- if the tables shared identical values (e.g. item names or prices) we would instead use UNION ALL.
+
+SELECT * FROM items_1
+UNION ALL
+SELECT * FROM items_2;
